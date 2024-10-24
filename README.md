@@ -4,7 +4,7 @@ Building a personal AI chatbot using LLM that can interact like a virtual versio
 
 LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base
 
-- Dataset format is in JSON with pair of "prompt" and "response" : 
+- Dataset format is in JSON with pair of "prompt" and "response" of my puclic personal data: 
 
 ```
 [
