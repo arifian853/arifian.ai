@@ -41,4 +41,10 @@ https://colab.research.google.com/drive/1y8MWtBxcKYgAc8TmQmEpeYOONZvjpuhe?usp=sh
 https://colab.research.google.com/drive/1P5hID7iAIZqHQ8cS5WaYoQ4QrcM08WAK?usp=sharing
 ```
 
+- Google T5 Large (Result : Worse)
+```
+https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sharing
+```
+
+
 Goals : The LLM can answers question related to my data.
