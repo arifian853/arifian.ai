@@ -2,7 +2,8 @@
 
 Building a personal AI chatbot using LLM that can interact like a virtual version of myself.
 
-LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base
+LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base, Google T5 Large
+Worth to try : Meta Llama, Mistral
 
 - Dataset format is in JSON with pair of "prompt" and "response" of my puclic personal data: 
 
