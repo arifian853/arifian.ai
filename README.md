@@ -2,6 +2,7 @@
 
 Building a personal AI chatbot using LLM that can interact like a virtual version of myself.
 
+### Method 1 - Fine-tune small LLMs
 LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base, Google T5 Large
 
 Worth to try : Meta Llama, Mistral
@@ -48,5 +49,8 @@ https://colab.research.google.com/drive/1P5hID7iAIZqHQ8cS5WaYoQ4QrcM08WAK?usp=sh
 https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sharing
 ```
 
+- Conclusions
+This method is canceled.
 
-Goals : The LLM can answers question related to my data.
+
+### Method 2 - Use Groq API
