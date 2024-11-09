@@ -53,4 +53,14 @@ https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sh
 This method is canceled.
 
 
-### Method 2 - Use Groq API
+### Method 2 - Build manual NLP
+
+- Bidirectional LSTM (Result: Bad, need more dataset)
+```
+https://colab.research.google.com/drive/16rCFvfDOn1Dtc7b8_SQasTdYTVy8C3i4?usp=sharing
+```
+
+- SVM (Support Vector Machine) (Result: Better, need to extend the context)
+```
+https://colab.research.google.com/drive/1HA50eQx8brVg043e4SgaH47DfvDhJ_49?usp=sharing
+```
