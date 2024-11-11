@@ -64,3 +64,8 @@ https://colab.research.google.com/drive/16rCFvfDOn1Dtc7b8_SQasTdYTVy8C3i4?usp=sh
 ```
 https://colab.research.google.com/drive/1HA50eQx8brVg043e4SgaH47DfvDhJ_49?usp=sharing
 ```
+
+- T5 (Text-to-Text Transfer Transformer) and USE (Universal Sentence Encoder)
+```
+https://colab.research.google.com/drive/17fm1X9B88tkIkvxSboUn6wsoMNifbRnr?usp=sharing
+```
