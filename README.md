@@ -1,8 +1,24 @@
-### Arifian.AI
+<h1 align="center">  Arifian.AI </h1>
 
-Building a personal AI chatbot using LLM that can interact like a virtual version of myself.
+<p align="center"> 
+    Building a personal AI chatbot using a pre-trained and fine-tuned LLM, or building an NLP model from scratch that can interact like a virtual AI version/persona of myself.
+</p>
+
+<div align="center">
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white">
+    <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white">
+    <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white">
+    <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white">
+    <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"> 
+</div>
+
+
 
 ### Method 1 - Fine-tune small LLMs
+<details>
+<summary> Here </summary>
+
 LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base, Google T5 Large
 
 Worth to try : Meta Llama, Mistral
@@ -51,6 +67,7 @@ https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sh
 
 - Conclusions
 This method is canceled.
+</details>
 
 
 ### Method 2 - Build manual NLP
