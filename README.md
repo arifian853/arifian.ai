@@ -90,7 +90,9 @@ This method is canceled.
 ### Method 2 - Build manual NLP
 <details>
 <summary> Click to see details </summary>
+
 - Bidirectional LSTM (Result: Bad, need more dataset)
+
 ```
 https://colab.research.google.com/drive/16rCFvfDOn1Dtc7b8_SQasTdYTVy8C3i4?usp=sharing
 ```
