@@ -13,17 +13,9 @@
     <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"> 
 </div>
 
+## Dataset
 
-
-### Method 1 - Fine-tune small LLMs
-<details>
-<summary> Here </summary>
-
-LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base, Google T5 Large
-
-Worth to try : Meta Llama, Mistral
-
-- Dataset format is in JSON with pair of "prompt" and "response" of my puclic personal data: 
+- Dataset format is in JSON with pair of "prompt" and "response" of my public personal data for method 1: 
 
 ```
 [
@@ -37,6 +29,30 @@ Worth to try : Meta Llama, Mistral
     },
 ]
 ```
+
+- Dataset format is in JSON with pair of "question" and "answer" of my public personal data for method 2: 
+
+```
+[
+    {
+        "question": "Siapakah kamu, Arifian?",
+        "answer": "Namaku Arifian Saputra, Salam kenal!"
+    },
+    {
+        "question": "Arifian, berapa umurmu?",
+        "answer": "Saat ini aku berumur 22 tahun."
+    },
+]
+```
+## Methods
+
+### Method 1 - Fine-tune small LLMs
+<details>
+<summary> Click to see details </summary>
+
+LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base, Google T5 Large
+
+Worth to try : Meta Llama, Mistral (Canceled)
 
 Fine-tuning history : 
 
@@ -71,7 +87,8 @@ This method is canceled.
 
 
 ### Method 2 - Build manual NLP
-
+<details>
+<summary> Click to see details </summary>
 - Bidirectional LSTM (Result: Bad, need more dataset)
 ```
 https://colab.research.google.com/drive/16rCFvfDOn1Dtc7b8_SQasTdYTVy8C3i4?usp=sharing
@@ -82,7 +99,70 @@ https://colab.research.google.com/drive/16rCFvfDOn1Dtc7b8_SQasTdYTVy8C3i4?usp=sh
 https://colab.research.google.com/drive/1HA50eQx8brVg043e4SgaH47DfvDhJ_49?usp=sharing
 ```
 
-- T5 (Text-to-Text Transfer Transformer) and USE (Universal Sentence Encoder)
+- Conclusions
+This method is canceled.
+</details>
+
+### Method 3 - Fine-tuning with pre-trained model T5 and USE feature extraction
+
+- Result: Moderate
+
+- T5 (Text-to-Text Transfer Transformer) and USE (Universal Sentence Encoder) 
 ```
 https://colab.research.google.com/drive/17fm1X9B88tkIkvxSboUn6wsoMNifbRnr?usp=sharing
 ```
+
+## Result
+
+The method used in this project is Method 3, fine-tuning with pre-trained model T5 and USE feature extraction.
+
+- Result:
+    - v0.1 (persona_dataset2.json)
+    ```
+    ROUGE-1: 0.4902
+    ROUGE-2: 0.2448
+    ROUGE-L: 0.4419
+    BLEU Score: 24.6660 (24.66%)
+
+    Epoch : 12
+    Average Training Loss: 0.1760
+    Learning Rate: 5e-4
+    ```
+    - Result visualization
+    ![result1](/result/v0.1/loss-visualization.png)
+
+    - v0.2 (persona_dataset3.json)
+    ```
+    ROUGE-1: 0.5797
+    ROUGE-2: 0.3899
+    ROUGE-L: 0.5502
+    BLEU Score: 26.8416 (26.84%)
+
+    Epoch : 12
+    Average Training Loss: 0.1517
+    Learning Rate: 5e-4
+    ```
+    - Result visualization
+    ![result1](/result/v0.2/loss-visualization.png)
+
+- Conclusion
+This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
+
+- How to use
+
+    -  Requirements
+    ```
+    flask
+    flask_cors
+    transformers
+    torch
+    sentencepiece
+    ```
+    - Run with:
+    ```
+    py app.py
+    ```
+    - API endpoints
+    ```
+    http://127.0.0.1/5000/ask
+    ```
