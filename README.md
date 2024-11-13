@@ -82,8 +82,7 @@ https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sh
 ```
 
 - Conclusions
-
-This method is canceled.
+    - This method is canceled.
 </details>
 
 
@@ -103,8 +102,7 @@ https://colab.research.google.com/drive/1HA50eQx8brVg043e4SgaH47DfvDhJ_49?usp=sh
 ```
 
 - Conclusions
-
-This method is canceled.
+    - This method is canceled.
 </details>
 
 ### Method 3 - Fine-tuning with pre-trained model T5 and USE feature extraction
@@ -152,8 +150,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     ![result1](/result/v0.2/loss-visualization.png)
 
 - Conclusion
-
-This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
+    - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
 
 - How to use
 
