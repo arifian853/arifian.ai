@@ -30,7 +30,7 @@
 ]
 ```
 
-- Dataset format is in JSON with pair of "question" and "answer" of my public personal data for method 2: 
+- Dataset format is in JSON with pair of "question" and "answer" of my public personal data for method 2 and 3: 
 
 ```
 [
@@ -82,6 +82,7 @@ https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sh
 ```
 
 - Conclusions
+
 This method is canceled.
 </details>
 
@@ -100,6 +101,7 @@ https://colab.research.google.com/drive/1HA50eQx8brVg043e4SgaH47DfvDhJ_49?usp=sh
 ```
 
 - Conclusions
+
 This method is canceled.
 </details>
 
@@ -129,6 +131,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Learning Rate: 5e-4
     ```
     - Result visualization
+
     ![result1](/result/v0.1/loss-visualization.png)
 
     - v0.2 (persona_dataset3.json)
@@ -143,9 +146,11 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Learning Rate: 5e-4
     ```
     - Result visualization
+
     ![result1](/result/v0.2/loss-visualization.png)
 
 - Conclusion
+
 This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
 
 - How to use
