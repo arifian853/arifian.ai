@@ -3,7 +3,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from flask_cors import CORS
 
 # Load model dan tokenizer
-model_path = './trained_model/v0.2'
+model_path = './trained_model/v0.3'
 tokenizer = T5Tokenizer.from_pretrained(model_path)
 model = T5ForConditionalGeneration.from_pretrained(model_path)
 

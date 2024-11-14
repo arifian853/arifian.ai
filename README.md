@@ -181,7 +181,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
     ![result1](/result/v0.2/loss-visualization.png)
 
-    - v0.2 (persona_dataset4.json)
+    - v0.3 (persona_dataset4.json)
     ```
     Result Summary
     ROUGE-1: 0.5548
@@ -210,7 +210,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     ```
     - Result visualization
 
-    ![result1](/result/v0.3/loss-visualization.png)
+    ![result1](/result/v0.3/loss_visualization.png)
 
 - Conclusion
     - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
