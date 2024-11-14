@@ -224,8 +224,10 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, but has greater result when tested.
     - Current plan: increase the number of question-answer pairs in the dataset with lots of augmentations.
 
-- How to use, (download the model at HuggingFace [here](https://huggingface.co/arifian853/arifian.ai))
+- How to use
 
+    - Download the model at HuggingFace [here](https://huggingface.co/arifian853/arifian.ai), 
+    - adjust it to the path in the ```app.py``` code ```(/trained_model/v0.3)```
     - Clone the repository, or just the ```app.py``` file.
     - Make new virtual environment and activate it
     -  Install the requirements
