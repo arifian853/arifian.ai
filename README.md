@@ -50,6 +50,7 @@
 <details>
 <summary> Click to see details </summary>
 
+
 LLM used : GPT-2, GPT Neo 1.3B, Google T5 Base, Google T5 Large
 
 Worth to try : Meta Llama, Mistral (Canceled)
@@ -83,12 +84,14 @@ https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sh
 
 - Conclusions
     - This method is canceled.
+    
 </details>
 
 
 ### Method 2 - Build manual NLP
 <details>
 <summary> Click to see details </summary>
+
 
 - Bidirectional LSTM (Result: Bad, need more dataset)
 
@@ -103,6 +106,7 @@ https://colab.research.google.com/drive/1HA50eQx8brVg043e4SgaH47DfvDhJ_49?usp=sh
 
 - Conclusions
     - This method is canceled.
+
 </details>
 
 ### Method 3 - Fine-tuning with pre-trained model T5 and USE feature extraction
@@ -120,6 +124,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
 - Result:
     - v0.1 (persona_dataset2.json)
+
     ```
     Result Summary
     ROUGE-1: 0.4902
@@ -151,6 +156,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     ![result1](/result/v0.1/loss-visualization.png)
 
     - v0.2 (persona_dataset3.json)
+
     ```
     Result Summary
     ROUGE-1: 0.5797
@@ -182,6 +188,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     ![result1](/result/v0.2/loss-visualization.png)
 
     - v0.3 (persona_dataset4.json)
+
     ```
     Result Summary
     ROUGE-1: 0.5548
