@@ -121,14 +121,30 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 - Result:
     - v0.1 (persona_dataset2.json)
     ```
+    Result Summary
     ROUGE-1: 0.4902
     ROUGE-2: 0.2448
     ROUGE-L: 0.4419
-    BLEU Score: 24.6660 (24.66%)
+    BLEU Score: 24.6660
 
-    Epoch : 12
+    Training Losses Summary
+    Loss per epoch:
+    Epoch 1: 0.3075
+    Epoch 2: 0.2838
+    Epoch 3: 0.2173
+    Epoch 4: 0.2309
+    Epoch 5: 0.2179
+    Epoch 6: 0.1489
+    Epoch 7: 0.1363
+    Epoch 8: 0.1398
+    Epoch 9: 0.1107
+    Epoch 10: 0.1170
+    Epoch 11: 0.1083
+    Epoch 12: 0.0939
+
     Average Training Loss: 0.1760
-    Learning Rate: 5e-4
+    Learning Rate: 0.0005
+    Count of question-answer pair: 104
     ```
     - Result visualization
 
@@ -136,25 +152,76 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
     - v0.2 (persona_dataset3.json)
     ```
+    Result Summary
     ROUGE-1: 0.5797
     ROUGE-2: 0.3899
     ROUGE-L: 0.5502
-    BLEU Score: 26.8416 (26.84%)
+    BLEU Score: 26.8416
 
-    Epoch : 12
+    Training Losses Summary
+    Loss per epoch:
+    Epoch 1: 0.5053
+    Epoch 2: 0.3060
+    Epoch 3: 0.2035
+    Epoch 4: 0.1460
+    Epoch 5: 0.1338
+    Epoch 6: 0.0889
+    Epoch 7: 0.0724
+    Epoch 8: 0.0938
+    Epoch 9: 0.0800
+    Epoch 10: 0.0661
+    Epoch 11: 0.0704
+    Epoch 12: 0.0541
+
     Average Training Loss: 0.1517
-    Learning Rate: 5e-4
+    Learning Rate: 0.0005
+    Count of question-answer pair: 81
     ```
     - Result visualization
 
     ![result1](/result/v0.2/loss-visualization.png)
 
+    - v0.2 (persona_dataset4.json)
+    ```
+    Result Summary
+    ROUGE-1: 0.5548
+    ROUGE-2: 0.4657
+    ROUGE-L: 0.5456
+    BLEU Score: 39.2361
+
+    Training Losses Summary
+    Loss per epoch:
+    Epoch 1: 2.8626
+    Epoch 2: 1.3558
+    Epoch 3: 0.9349
+    Epoch 4: 0.7211
+    Epoch 5: 0.5845
+    Epoch 6: 0.4805
+    Epoch 7: 0.4145
+    Epoch 8: 0.3672
+    Epoch 9: 0.3231
+    Epoch 10: 0.2663
+    Epoch 11: 0.2168
+    Epoch 12: 0.2115
+
+    Average Training Loss: 0.7282
+    Learning Rate: 0.0005
+    Count of question-answer pair: 268
+    ```
+    - Result visualization
+
+    ![result1](/result/v0.3/loss-visualization.png)
+
 - Conclusion
     - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
+    - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, but has greater result when tested.
+    - Current plan: increase the number of question-answer pairs in the dataset with lots of augmentations.
 
-- How to use
+- How to use, (download the model at HuggingFace ![here](https://huggingface.co/arifian853/arifian.ai))
 
-    -  Requirements
+    - Clone the repository, or just the ```app.py``` file.
+    - Make new virtual environment and activate it
+    -  Install the requirements
     ```
     flask
     flask_cors
@@ -166,7 +233,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     ```
     py app.py
     ```
-    - API endpoints
+    - Accessable API endpoint to test
     ```
     http://127.0.0.1/5000/ask
     ```
