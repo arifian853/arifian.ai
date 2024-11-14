@@ -84,7 +84,7 @@ https://colab.research.google.com/drive/1t7Z6ZSjnIa8UNFmhnQ9G71UreMFBoEG7?usp=sh
 
 - Conclusions
     - This method is canceled.
-    
+
 </details>
 
 
@@ -224,7 +224,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, but has greater result when tested.
     - Current plan: increase the number of question-answer pairs in the dataset with lots of augmentations.
 
-- How to use, (download the model at HuggingFace ![here](https://huggingface.co/arifian853/arifian.ai))
+- How to use, (download the model at HuggingFace [here](https://huggingface.co/arifian853/arifian.ai))
 
     - Clone the repository, or just the ```app.py``` file.
     - Make new virtual environment and activate it
