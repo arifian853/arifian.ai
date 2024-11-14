@@ -227,7 +227,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 - How to use
 
     - Download the model at HuggingFace [here](https://huggingface.co/arifian853/arifian.ai), 
-    - adjust it to the path in the ```app.py``` code ```(/trained_model/v0.3)```
+    - Adjust it to the path in the ```app.py``` code ```(/trained_model/v0.3)```
     - Clone the repository, or just the ```app.py``` file.
     - Make new virtual environment and activate it
     -  Install the requirements
