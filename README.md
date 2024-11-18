@@ -219,14 +219,53 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
     ![result1](/result/v0.3/loss_visualization.png)
 
+    - v0.3 (persona_dataset4.json)
+
+    ```
+    Result Summary
+    ROUGE-1: 0.5903
+    ROUGE-2: 0.4748
+    ROUGE-L: 0.5678
+    BLEU Score: 42.4546
+
+    Training Losses Summary
+    Loss per epoch:
+    Epoch 1: 2.8721
+    Epoch 2: 1.3137
+    Epoch 3: 0.9076
+    Epoch 4: 0.6958
+    Epoch 5: 0.5559
+    Epoch 6: 0.4559
+    Epoch 7: 0.3847
+    Epoch 8: 0.3312
+    Epoch 9: 0.2707
+    Epoch 10: 0.2375
+    Epoch 11: 0.1969
+    Epoch 12: 0.1854
+    Epoch 13: 0.1579
+    Epoch 14: 0.1361
+    Epoch 15: 0.1339
+
+    Average Training Loss: 0.5890
+    Learning Rate: 0.0005
+    Count of question-answer pair: 270
+
+    ```
+    - Result visualization
+
+    ![result1](/result/v0.3.1/loss_visualization.png)
+
 - Conclusion
     - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, and an almost stagnant result when tested.
     - Current plan: increase the number of question-answer pairs in the dataset with lots of augmentations.
+    - In v4.0 after increasing the number of question-answer pairs, the model resulting in poor result after training.
+    - v3.1 will be the latest update for now with a slight improvement of BLEU and ROUGE score.
+    - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai)
 
 - How to use
 
-    - Download the model at HuggingFace [here](https://huggingface.co/arifian853/arifian.ai), 
+    - Download the model at HuggingFace , 
     - Adjust it to the path in the ```app.py``` code ```(/trained_model/v0.3)```
     - Clone the repository, or just the ```app.py``` file.
     - Make new virtual environment and activate it
@@ -244,5 +283,9 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     ```
     - Accessable API endpoint to test
     ```
-    http://127.0.0.1/5000/ask
+    http://127.0.0.1:5000/ask
+    ```
+    Or
+    ```
+    http://localhost:5000/ask
     ```
