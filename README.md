@@ -260,7 +260,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, and an almost stagnant result when tested.
     - In v4.0 after increasing the number of question-answer pairs, the model resulting in poor result after training.
     - v3.1 will be the latest update for now with a slight improvement of BLEU and ROUGE score after increasing to 15 epochs.
-    - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai)
+    - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai).
 
 - How to use
 
