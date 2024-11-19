@@ -255,11 +255,78 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
     ![result1](/result/v0.3.1/loss_visualization.png)
 
+    - v0.4 & - v0.4.1 (persona_dataset5.json)
+
+    ```
+    v0.4
+    Result Summary
+    ROUGE-1: 0.6647
+    ROUGE-2: 0.5067
+    ROUGE-L: 0.6386
+    BLEU Score: 50.0938
+
+    16 Epochs with average training loss: 0.6282
+    Learning Rate: 0.0005
+    Count of question-answer pair: 297
+
+    v0.4.1
+    Result Summary
+    ROUGE-1: 0.6640
+    ROUGE-2: 0.5327
+    ROUGE-L: 0.6441
+    BLEU Score: 52.0508
+
+    Training Losses Summary
+    Loss per epoch:
+    Epoch 1: 0.1451
+    Epoch 2: 0.1388
+    Epoch 3: 0.1398
+    Epoch 4: 0.1283
+    Epoch 5: 0.0957
+    Epoch 6: 0.0946
+    Epoch 7: 0.0858
+    Epoch 8: 0.0819
+    Epoch 9: 0.0683
+    Epoch 10: 0.0650
+    Epoch 11: 0.0708
+    Epoch 12: 0.0693
+    Epoch 13: 0.0688
+    Epoch 14: 0.0599
+    Epoch 15: 0.0617
+    Epoch 16: 0.0601
+    Epoch 17: 0.0458
+    Epoch 18: 0.0575
+    Epoch 19: 0.0582
+    Epoch 20: 0.0429
+
+    Average Training Loss: 0.0819
+    Learning Rate: 0.0005
+    Count of question-answer pair: 297
+    ```
+    - Result visualization
+
+    ![result1](/result/v0.4.1/loss_visualization.png)
+
 - Conclusion
     - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, and an almost stagnant result when tested.
     - In v4.0 after increasing the number of question-answer pairs, the model resulting in poor result after training.
-    - v3.1 will be the latest update for now with a slight improvement of BLEU and ROUGE score after increasing to 15 epochs.
+    - v3.1 will was the update with a slight improvement of BLEU and ROUGE score after increasing to 15 epochs.
+    - Version 4.0 is the most significant improvement after creating new question-answer pairs and deleting all non-context question-answer pairs that could only answer "I don't know about that". It has an addition of 20+ question-answer pairs, and training was conducted with 16 and 20 epochs. The 20-epoch training performed the best.
+        - The performance metrics are as follows:
+            - 16 epochs:
+
+                - ROUGE-1: 0.6647
+                - ROUGE-2: 0.5067
+                - ROUGE-L: 0.6386
+                - BLEU Score: 50.0938%
+
+            - 20 epochs:
+
+                - ROUGE-1: 0.6640
+                - ROUGE-2: 0.5327
+                - ROUGE-L: 0.6441
+                - BLEU Score: 52.0508%
     - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai).
 
 - How to use

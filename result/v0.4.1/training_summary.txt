@@ -1,0 +1,32 @@
+Result Summary
+ROUGE-1: 0.6640
+ROUGE-2: 0.5327
+ROUGE-L: 0.6441
+BLEU Score: 52.0508
+
+Training Losses Summary
+Loss per epoch:
+Epoch 1: 0.1451
+Epoch 2: 0.1388
+Epoch 3: 0.1398
+Epoch 4: 0.1283
+Epoch 5: 0.0957
+Epoch 6: 0.0946
+Epoch 7: 0.0858
+Epoch 8: 0.0819
+Epoch 9: 0.0683
+Epoch 10: 0.0650
+Epoch 11: 0.0708
+Epoch 12: 0.0693
+Epoch 13: 0.0688
+Epoch 14: 0.0599
+Epoch 15: 0.0617
+Epoch 16: 0.0601
+Epoch 17: 0.0458
+Epoch 18: 0.0575
+Epoch 19: 0.0582
+Epoch 20: 0.0429
+
+Average Training Loss: 0.0819
+Learning Rate: 0.0005
+Count of question-answer pair: 297
