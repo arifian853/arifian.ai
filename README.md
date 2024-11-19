@@ -313,17 +313,17 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     - Version 3.1 was the update with a slight improvement of BLEU and ROUGE score after increasing to 15 epochs after using 12 epoch before.
     - In version 4.0, after increasing the number of question-answer pairs, the model resulted in poor results due to training with many question-answer pairs that could only answer "I don't know about that" (out-of-context question-answer pairs, will be deleted in new v4.0).
     - Version 4.0.1 is the most significant improvement after creating new question-answer pairs and deleting all non-context question-answer pairs that could only answer "I don't know about that". It has an addition of 20+ question-answer pairs, and training was conducted with 16 and 20 epochs. The 20-epoch training performed the best.
-        - The performance metrics are as follows:
-            - 16 epochs:
-                - ROUGE-1: 0.6647
-                - ROUGE-2: 0.5067
-                - ROUGE-L: 0.6386
-                - BLEU Score: 50.0938%
-            - 20 epochs:
-                - ROUGE-1: 0.6640
-                - ROUGE-2: 0.5327
-                - ROUGE-L: 0.6441
-                - BLEU Score: 52.0508%
+    - The performance metrics of version 0.4 and 0.4.1 are as follows:
+        - 16 epochs:
+            - ROUGE-1: 0.6647
+            - ROUGE-2: 0.5067
+            - ROUGE-L: 0.6386
+            - BLEU Score: 50.0938%
+        - 20 epochs:
+            - ROUGE-1: 0.6640
+            - ROUGE-2: 0.5327
+            - ROUGE-L: 0.6441
+            - BLEU Score: 52.0508%
 
     - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai).
 
