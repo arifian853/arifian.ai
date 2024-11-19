@@ -319,11 +319,13 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
             - ROUGE-2: 0.5067
             - ROUGE-L: 0.6386
             - BLEU Score: 50.0938%
+            - Average Training Loss: 0.6282
         - 20 epochs:
             - ROUGE-1: 0.6640
             - ROUGE-2: 0.5327
             - ROUGE-L: 0.6441
             - BLEU Score: 52.0508%
+            - Average Training Loss: 0.0819
 
     - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai).
 
