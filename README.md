@@ -307,7 +307,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
     ![result1](/result/v0.4.1/loss_visualization.png)
 
-- Conclusion
+- Conclusion (updated periodically)
     - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, and an almost stagnant result when tested.
     - Version 3.1 was the update with a slight improvement of BLEU and ROUGE score after increasing to 15 epochs after using 12 epoch before.
