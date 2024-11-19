@@ -326,7 +326,9 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
             - ROUGE-L: 0.6441
             - BLEU Score: 52.0508%
             - Average Training Loss: 0.0819
-
+    
+    - The model's performance is still not satisfactory, and further improvements are needed to achieve the desired performance.
+    - Next update will use 18-20 epochs as defaults with a stagnant learning rate at 5e-4 (0.0005).
     - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai).
 
 - How to use
