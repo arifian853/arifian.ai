@@ -123,8 +123,8 @@ https://colab.research.google.com/drive/17fm1X9B88tkIkvxSboUn6wsoMNifbRnr?usp=sh
 The method used in this project is Method 3, fine-tuning with pre-trained model T5 and USE feature extraction.
 
 - Result:
-    - v0.1 (persona_dataset2.json)
-
+    
+    v0.1 (persona_dataset2.json)
     ```
     Result Summary
     ROUGE-1: 0.4902
@@ -151,12 +151,11 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Learning Rate: 0.0005
     Count of question-answer pair: 104
     ```
-    - Result visualization
+    Result visualization
 
     ![result1](/result/v0.1/loss-visualization.png)
 
-    - v0.2 (persona_dataset3.json)
-
+    v0.2 (persona_dataset3.json)
     ```
     Result Summary
     ROUGE-1: 0.5797
@@ -183,12 +182,11 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Learning Rate: 0.0005
     Count of question-answer pair: 81
     ```
-    - Result visualization
+    Result visualization
 
     ![result1](/result/v0.2/loss-visualization.png)
 
-    - v0.3 (persona_dataset4.json)
-
+    v0.3 (persona_dataset4.json)
     ```
     Result Summary
     ROUGE-1: 0.5548
@@ -215,12 +213,11 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Learning Rate: 0.0005
     Count of question-answer pair: 268
     ```
-    - Result visualization
+    Result visualization
 
     ![result1](/result/v0.3/loss_visualization.png)
 
-    - v0.3.1 (persona_dataset4.1.json)
-
+    v0.3.1 (persona_dataset4.1.json)
     ```
     Result Summary
     ROUGE-1: 0.5903
@@ -251,12 +248,11 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Count of question-answer pair: 270
 
     ```
-    - Result visualization
+    Result visualization
 
     ![result1](/result/v0.3.1/loss_visualization.png)
 
-    - v0.4 & - v0.4.1 (persona_dataset5.json)
-
+    v0.4 & - v0.4.1 (persona_dataset5.json)
     ```
     v0.4
     Result Summary
@@ -303,7 +299,7 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
     Learning Rate: 0.0005
     Count of question-answer pair: 297
     ```
-    - Result visualization
+    Result visualization
 
     ![result1](/result/v0.4.1/loss_visualization.png)
 
