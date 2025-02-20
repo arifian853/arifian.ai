@@ -363,9 +363,9 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
         Version 0.4.2 shows significant improvement compared to previous versions. The ROUGE-1 score increased to 0.7025, ROUGE-2 to 0.6278, and ROUGE-L to 0.6970, while the BLEU score rose to 53.02%. These improvements suggest that the model is now able to generate more relevant and high-quality outputs.
     - Increased Dataset Size:
         With the addition of more question-answer pairs (721 in total), the model was exposed to a greater variety of contexts. This increase in data is reflected in the better evaluation metrics, although it also introduced new challenges during the training process.
-- Training Process Dynamics:
+    - Training Process Dynamics:
         The average training loss recorded is 0.9676, which is notably higher than in previous versions. This may be influenced by the lower learning rate (3e-05) and the increased data complexity. While the evaluation metrics improved, the higher loss suggests that model convergence still requires optimization.
-- Future Development Directions:
+    - Future Development Directions:
         Although v0.4.2 shows better results in terms of evaluation metrics, further work is needed to reduce training loss and stabilize the training process. Optimizing the model's parameters and refining the training techniques will be key to achieving more consistent performance. 
 
 - How to use
