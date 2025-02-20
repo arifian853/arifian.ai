@@ -369,6 +369,6 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
         Although v0.4.2 shows better results in terms of evaluation metrics, further work is needed to reduce training loss and stabilize the training process. Optimizing the model's parameters and refining the training techniques will be key to achieving more consistent performance. 
 
 - The model is now stored at HuggingFace : 
-
     - [HuggingFace Repository](https://huggingface.co/arifian853/arifian.ai)
-    - And as a spaces for serving API to my Portfolio Page's Chatbot Arifian.AI [HuggingFace Spaces](https://huggingface.co/spaces/arifian853/arifian.ai) [Arifian.AI Page](https://arifian853.vercel.app/chat-ai) 
+    - And as a spaces for serving API to my Portfolio Page's Chatbot Arifian.AI [HuggingFace Spaces](https://huggingface.co/spaces/arifian853/arifian.ai) 
+    - Arifian.AI Page [Arifian.AI Page](https://arifian853.vercel.app/chat-ai) 
