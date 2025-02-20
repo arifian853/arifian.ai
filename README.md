@@ -303,7 +303,41 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
 
     ![result1](/result/v0.4.1/loss_visualization.png)
 
-- **Conclusion (updated periodically)**
+    **v0.4.2 (Feb 2025 latest) (persona_dataset6.json)**
+
+    ```
+    Result Summary
+    ROUGE-1: 0.7025
+    ROUGE-2: 0.6278
+    ROUGE-L: 0.6970
+    BLEU Score: 53.0199
+
+    Training Losses Summary
+    Loss per epoch:
+    Epoch 1: 3.7709
+    Epoch 2: 2.1844
+    Epoch 3: 1.7973
+    Epoch 4: 1.5351
+    Epoch 5: 1.3524
+    .
+    .
+    .
+    Epoch 21: 0.4699
+    Epoch 22: 0.4590
+    Epoch 23: 0.4346
+    Epoch 24: 0.4112
+    Epoch 25: 0.4065
+
+    Average Training Loss: 0.9676
+    Learning Rate: 3e-05
+    Count of question-answer pair: 721
+    ```
+
+    **Result visualization**
+
+    ![result1](/result/v0.4.2/loss_visualization.png)
+
+- **Conclusion of v0.4.1 (2024)**
     - This model need more data to achieve >= 0.9 ROUGE score and >= 30% BLEU score for greater result.
     - With a significant increase in the number of question-answer pairs, the model can achieve a BLEU score of 39.23%. However, the ROUGE score remains stagnant, leading to a larger average loss during training, and an almost stagnant result when tested.
     - Version 3.1 was the update with a slight improvement of BLEU and ROUGE score after increasing to 15 epochs after using 12 epoch before.
@@ -322,10 +356,17 @@ The method used in this project is Method 3, fine-tuning with pre-trained model 
             - ROUGE-L: 0.6441
             - BLEU Score: 52.0508%
             - Average Training Loss: 0.0819
-    
     - The model's performance is still not satisfactory, and further improvements are needed to achieve the desired performance.
-    - Next update will use 18-20 epochs as defaults with a stagnant learning rate at 5e-4 (0.0005).
-    - The model will available only for offline usage, download at [HuggingFace](https://huggingface.co/arifian853/arifian.ai).
+
+- **Conclusion of v0.4.2 Latest (Feb 2025)**
+    - Improved Evaluation Metrics (ROUGE-1: +5.68%, ROUGE-2: +23.89%, ROUGE-L: +9.14%, BLEU: +5.89%):
+        Version 0.4.2 shows significant improvement compared to previous versions. The ROUGE-1 score increased to 0.7025, ROUGE-2 to 0.6278, and ROUGE-L to 0.6970, while the BLEU score rose to 53.02%. These improvements suggest that the model is now able to generate more relevant and high-quality outputs.
+    - Increased Dataset Size:
+        With the addition of more question-answer pairs (721 in total), the model was exposed to a greater variety of contexts. This increase in data is reflected in the better evaluation metrics, although it also introduced new challenges during the training process.
+- Training Process Dynamics:
+        The average training loss recorded is 0.9676, which is notably higher than in previous versions. This may be influenced by the lower learning rate (3e-05) and the increased data complexity. While the evaluation metrics improved, the higher loss suggests that model convergence still requires optimization.
+- Future Development Directions:
+        Although v0.4.2 shows better results in terms of evaluation metrics, further work is needed to reduce training loss and stabilize the training process. Optimizing the model's parameters and refining the training techniques will be key to achieving more consistent performance. 
 
 - How to use
 
