@@ -1,7 +1,7 @@
 <h1 align="center">  Arifian.AI </h1>
 
 <p align="center"> 
-    Personal my-own-persona AI Chatbot made from Google T5-small and USE Feature Extraction. 
+    Personal my-own-AI-persona Chatbot made from Google T5-small and USE Feature Extraction. 
 </p>
 
 <div align="center">
