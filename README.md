@@ -1,7 +1,7 @@
 <h1 align="center">  Arifian.AI </h1>
 
 <p align="center"> 
-    Building a personal AI chatbot using a pre-trained and fine-tuned LLM, or building an NLP model from scratch that can interact like a virtual AI version/persona of myself.
+    Personal my-own-persona AI Chatbot made from Google T5-small and USE Feature Extraction. 
 </p>
 
 <div align="center">
