@@ -13,6 +13,9 @@
     <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"> 
 </div>
 
+## How did it works?
+![structure](structure.jpeg)
+
 ## Dataset
 
 - Dataset format is in JSON with pair of "prompt" and "response" of my public personal data for method 1: 

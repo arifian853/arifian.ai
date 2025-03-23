@@ -3,11 +3,11 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from flask_cors import CORS
 
 # Load model dan tokenizer
-model_path = './trained_model/v0.4.1'
+model_path = './trained_model/v0.4.2'
 tokenizer = T5Tokenizer.from_pretrained(model_path)
 model = T5ForConditionalGeneration.from_pretrained(model_path)
 
-# Inisialisasi aplikasi Flask
+# Flask initialization
 app = Flask(__name__)
 
 CORS(app)
@@ -19,7 +19,7 @@ def generate_response(question):
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return response
 
-# Route untuk menerima pertanyaan dan mengembalikan jawaban
+# Route for asking question and receiving answer
 @app.route('/ask', methods=['POST'])
 def ask_question():
     data = request.get_json()
@@ -31,6 +31,6 @@ def ask_question():
     answer = generate_response(question)
     return jsonify({"question": question, "answer": answer})
 
-# Menjalankan aplikasi Flask
+# Run the flask app
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
