@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+motor
+pymongo
+sentence-transformers
+huggingface_hub
+google-generativeai
+python-multipart
+jinja2

@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  rag-backend:
+    build: .
+    container_name: rag-fastapi-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    env_file:
+      - .env
+    volumes:
+      # Mount for development (uncomment for dev mode)
+      # - .:/app
+      - static_files:/app/static
+      - template_files:/app/templates
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/knowledge')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - rag-network
+
+  # Optional: Add MongoDB service for local development
+  # mongodb:
+  #   image: mongo:7.0
+  #   container_name: rag-mongodb
+  #   ports:
+  #     - "27017:27017"
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: admin
+  #     MONGO_INITDB_ROOT_PASSWORD: password
+  #     MONGO_INITDB_DATABASE: ai-personal
+  #   volumes:
+  #     - mongodb_data:/data/db
+  #   networks:
+  #     - rag-network
+
+volumes:
+  static_files:
+  template_files:
+  # mongodb_data:
+
+networks:
+  rag-network:
+    driver: bridge
