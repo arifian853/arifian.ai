@@ -234,7 +234,7 @@ print(response.json())
 ```python
 import requests
 
-response = requests.post("http://localhost:8000/knowledge", json={
+response = requests.post("http://localhost:7860/knowledge", json={
     "title": "Machine Learning Basics",
     "content": "Machine learning is a subset of artificial intelligence...",
     "source": "ML Textbook Chapter 1"
@@ -253,7 +253,7 @@ data = {
     'content_column': 'description'
 }
 
-response = requests.post("http://localhost:8000/upload-csv", files=files, data=data)
+response = requests.post("http://localhost:7860/upload-csv", files=files, data=data)
 print(response.json())
 ```
 
