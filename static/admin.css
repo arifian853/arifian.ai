@@ -1,0 +1,32 @@
+body {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.knowledge-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.nav-tabs {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.edit-btn {
+    margin-right: 8px;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}

@@ -5,7 +5,7 @@ services:
     build: .
     container_name: rag-fastapi-backend
     ports:
-      - "8000:8000"
+      - "7860:7860"
     environment:
       - MONGODB_URI=${MONGODB_URI}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY}
@@ -18,7 +18,7 @@ services:
       - template_files:/app/templates
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/knowledge')"]
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:7860/knowledge')"]
       interval: 30s
       timeout: 10s
       retries: 3

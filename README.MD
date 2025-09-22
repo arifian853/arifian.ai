@@ -14,10 +14,11 @@
 ## 🚀 Features
 
 - **RAG Chatbot**: Chatbot system with retrieval-augmented generation capabilities
-- **Knowledge Base Management**: CRUD operations for managing knowledge base
+- **Knowledge Base Management**: Full CRUD operations (Create, Read, Update, Delete) for managing knowledge base
+- **Edit Functionality**: Edit existing knowledge items with persistent UI components
 - **Vector Search**: Similarity search using SentenceTransformer embeddings
 - **File Upload**: Support for uploading TXT, CSV, and JSON files
-- **Admin Dashboard**: Web interface for managing knowledge base
+- **Admin Dashboard**: Modern web interface with separated HTML, CSS, and JavaScript files
 - **MongoDB Integration**: NoSQL database with vector search capabilities
 - **Google Gemini Integration**: AI model for response generation
 
@@ -106,7 +107,7 @@ python create_index.py
 python app.py
 ```
 
-Server will run at `http://localhost:8000`
+Server will run at `http://localhost:7860`
 
 ## 📚 API Documentation
 
@@ -154,6 +155,14 @@ Response:
 **GET** `/knowledge/{knowledge_id}` - Get specific knowledge item
 
 **PUT** `/knowledge/{knowledge_id}` - Update knowledge item
+```json
+{
+  "title": "Updated document title",
+  "content": "Updated document content",
+  "source": "Updated source",
+  "metadata": {}
+}
+```
 
 **DELETE** `/knowledge/{knowledge_id}` - Delete knowledge item
 
@@ -170,11 +179,18 @@ Response:
 
 ## 🖥️ Admin Dashboard
 
-Access admin dashboard at `http://localhost:8000` for:
+Access admin dashboard at `http://localhost:7860` for:
 
-- **Knowledge Base**: View and manage knowledge items
-- **Add Knowledge**: Add knowledge items manually
-- **Upload Files**: Upload TXT, CSV, or JSON files
+- **Knowledge Base**: View, edit, and delete knowledge items with persistent UI
+- **Add Knowledge**: Add knowledge items manually with form validation
+- **Edit Knowledge**: Edit existing knowledge items with auto-fill functionality
+- **Upload Files**: Upload TXT, CSV, or JSON files with batch processing
+
+### Admin Features
+- **Persistent Edit Buttons**: Edit functionality that remains after server restarts
+- **Separated Frontend**: Clean HTML structure with external CSS and JavaScript files
+- **Real-time Updates**: Immediate UI updates after CRUD operations
+- **Form Validation**: Client-side and server-side validation for data integrity
 
 ## 🏗️ Architecture
 
@@ -183,9 +199,14 @@ Access admin dashboard at `http://localhost:8000` for:
 ├── requirements.txt    # Python dependencies
 ├── create_index.py     # MongoDB vector index setup
 ├── .env.example       # Environment variables template
+├── Dockerfile         # Docker configuration
+├── docker-compose.yml # Docker Compose setup
+├── README.MD          # Project documentation
 ├── templates/         # Jinja2 templates
-│   └── admin.html     # Admin dashboard
-└── static/           # Static files
+│   └── admin.html     # Admin dashboard HTML
+└── static/           # Static files (CSS, JS)
+    ├── admin.css     # Admin dashboard styles
+    └── admin.js      # Admin dashboard functionality
 ```
 
 ### Key Components
@@ -201,7 +222,7 @@ Access admin dashboard at `http://localhost:8000` for:
 ```python
 import requests
 
-response = requests.post("http://localhost:8000/chat", json={
+response = requests.post("http://localhost:7860/chat", json={
     "message": "What is machine learning?",
     "history": []
 })
@@ -244,7 +265,7 @@ print(response.json())
 docker build -t rag-backend .
 
 # Run container
-docker run -p 8000:8000 --env-file .env rag-backend
+docker run -p 7860:7860 --env-file .env rag-backend
 ```
 
 ### Production Considerations
