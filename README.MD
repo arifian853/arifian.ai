@@ -1,32 +1,40 @@
-# RAG Chatbot Backend - FastAPI 
-### Arifian.AI v1.1
+<h3 align="center"> Arifian.AI v1.1 </h3>
 
-Backend FastAPI untuk sistem chatbot RAG (Retrieval-Augmented Generation) dengan knowledge base management dan embedding search menggunakan SentenceTransformer. Digunakan untuk Arifian.AI pada halaman portofolio di : https://arifian853.vercel.app
+<p align="center"> FastAPI backend for RAG (Retrieval-Augmented Generation) chatbot system with knowledge base management and embedding search using SentenceTransformer. Used for Personal my-own-AI-persona Chatbot Arifian.AI on portfolio page : https://arifian853.vercel.app </p>
 
-## 🚀 Fitur
+<div align="center">
+    <img src="https://img.shields.io/badge/FastAPI-009485?style=for-the-badge&logo=fastapi&logoColor=white">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white">
+    <img src="https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white">
+    <img src="https://img.shields.io/badge/Uvicorn-FF6C37?style=for-the-badge&logo=uvicorn&logoColor=white">
+    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+</div>
 
-- **RAG Chatbot**: Sistem chatbot dengan kemampuan retrieval-augmented generation
-- **Knowledge Base Management**: CRUD operations untuk mengelola knowledge base
-- **Vector Search**: Pencarian similarity menggunakan embedding SentenceTransformer
-- **File Upload**: Support upload file TXT, CSV, dan JSON
-- **Admin Dashboard**: Web interface untuk mengelola knowledge base
-- **MongoDB Integration**: Database NoSQL dengan vector search capabilities
-- **Google Gemini Integration**: AI model untuk response generation
+## 🚀 Features
+
+- **RAG Chatbot**: Chatbot system with retrieval-augmented generation capabilities
+- **Knowledge Base Management**: CRUD operations for managing knowledge base
+- **Vector Search**: Similarity search using SentenceTransformer embeddings
+- **File Upload**: Support for uploading TXT, CSV, and JSON files
+- **Admin Dashboard**: Web interface for managing knowledge base
+- **MongoDB Integration**: NoSQL database with vector search capabilities
+- **Google Gemini Integration**: AI model for response generation
 
 ## 🛠️ Tech Stack
 
-- **FastAPI**: Modern web framework untuk Python
-- **MongoDB**: Database dengan Motor async driver
-- **SentenceTransformer**: Model embedding lokal (all-MiniLM-L6-v2)
-- **Google Gemini**: AI model untuk text generation
+- **FastAPI**: Modern web framework for Python
+- **MongoDB**: Database with Motor async driver
+- **SentenceTransformer**: Local embedding model (all-MiniLM-L6-v2)
+- **Google Gemini**: AI model for text generation
 - **Uvicorn**: ASGI server
 - **Bootstrap 5**: Frontend UI framework
 
 ## 📋 Prerequisites
 
 - Python 3.8+
-- MongoDB Atlas account atau MongoDB local
-- Google API Key untuk Gemini
+- MongoDB Atlas account or local MongoDB
+- Google API Key for Gemini
 
 ## 🔧 Installation
 
@@ -36,29 +44,29 @@ git clone <repository-url>
 cd backend-fastapi
 ```
 
-2. **Create dan aktifkan virtual environment**
+2. **Create and activate virtual environment**
 
-### Menggunakan pip (venv)
+### Using pip (venv)
 ```bash
-# Buat virtual environment
+# Create virtual environment
 python -m venv venv
 
-# Aktifkan virtual environment
+# Activate virtual environment
 # Windows
 venv\Scripts\activate
 # Linux/Mac
 source venv/bin/activate
 ```
 
-### Menggunakan uv (recommended - lebih cepat)
+### Using uv (recommended - faster)
 ```bash
-# Install uv jika belum ada
+# Install uv if not already installed
 pip install uv
 
-# Buat virtual environment dengan uv
+# Create virtual environment with uv
 uv venv
 
-# Aktifkan virtual environment
+# Activate virtual environment
 # Windows
 .venv\Scripts\activate
 # Linux/Mac
@@ -67,12 +75,12 @@ source .venv/bin/activate
 
 3. **Install dependencies**
 
-### Menggunakan pip
+### Using pip
 ```bash
 pip install -r requirements.txt
 ```
 
-### Menggunakan uv (lebih cepat)
+### Using uv (faster)
 ```bash
 uv pip install -r requirements.txt
 ```
@@ -82,7 +90,7 @@ uv pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Edit file `.env` dengan konfigurasi Anda:
+Edit the `.env` file with your configuration:
 ```env
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/
 GOOGLE_API_KEY=your_google_api_key_here
@@ -98,7 +106,7 @@ python create_index.py
 python app.py
 ```
 
-Server akan berjalan di `http://localhost:8000`
+Server will run at `http://localhost:8000`
 
 ## 📚 API Documentation
 
@@ -162,11 +170,11 @@ Response:
 
 ## 🖥️ Admin Dashboard
 
-Akses admin dashboard di `http://localhost:8000` untuk:
+Access admin dashboard at `http://localhost:8000` for:
 
-- **Knowledge Base**: View dan manage knowledge items
-- **Add Knowledge**: Tambah knowledge item manual
-- **Upload Files**: Upload file TXT, CSV, atau JSON
+- **Knowledge Base**: View and manage knowledge items
+- **Add Knowledge**: Add knowledge items manually
+- **Upload Files**: Upload TXT, CSV, or JSON files
 
 ## 🏗️ Architecture
 
@@ -182,39 +190,39 @@ Akses admin dashboard di `http://localhost:8000` untuk:
 
 ### Key Components
 
-1. **Embedding Model**: SentenceTransformer 'all-MiniLM-L6-v2' untuk generate embeddings
-2. **Vector Search**: Cosine similarity search pada MongoDB
-3. **RAG Pipeline**: Retrieve relevant documents → Generate response dengan Gemini
-4. **Async Operations**: Full async/await support dengan Motor driver
+1. **Embedding Model**: SentenceTransformer 'all-MiniLM-L6-v2' for generating embeddings
+2. **Vector Search**: Cosine similarity search on MongoDB
+3. **RAG Pipeline**: Retrieve relevant documents → Generate response with Gemini
+4. **Async Operations**: Full async/await support with Motor driver
 
 ## 🔍 Usage Examples
 
-### 1. Chat dengan Knowledge Base
+### 1. Chat with Knowledge Base
 ```python
 import requests
 
 response = requests.post("http://localhost:8000/chat", json={
-    "message": "Apa itu machine learning?",
+    "message": "What is machine learning?",
     "history": []
 })
 
 print(response.json())
 ```
 
-### 2. Tambah Knowledge Item
+### 2. Add Knowledge Item
 ```python
 import requests
 
 response = requests.post("http://localhost:8000/knowledge", json={
     "title": "Machine Learning Basics",
-    "content": "Machine learning adalah subset dari artificial intelligence...",
+    "content": "Machine learning is a subset of artificial intelligence...",
     "source": "ML Textbook Chapter 1"
 })
 
 print(response.json())
 ```
 
-### 3. Upload File CSV
+### 3. Upload CSV File
 ```python
 import requests
 
@@ -242,10 +250,10 @@ docker run -p 8000:8000 --env-file .env rag-backend
 ### Production Considerations
 
 1. **Environment Variables**: Set proper production values
-2. **CORS**: Configure allowed origins untuk production
-3. **Database**: Use MongoDB Atlas atau dedicated MongoDB instance
-4. **Monitoring**: Add logging dan monitoring
-5. **Security**: Implement authentication dan rate limiting
+2. **CORS**: Configure allowed origins for production
+3. **Database**: Use MongoDB Atlas or dedicated MongoDB instance
+4. **Monitoring**: Add logging and monitoring
+5. **Security**: Implement authentication and rate limiting
 
 ## 🔧 Configuration
 
@@ -259,7 +267,7 @@ docker run -p 8000:8000 --env-file .env rag-backend
 ### Model Configuration
 
 - **Embedding Model**: `all-MiniLM-L6-v2` (384 dimensions)
-- **Similarity Threshold**: Configurable dalam search function
+- **Similarity Threshold**: Configurable in search function
 - **Max Results**: Default 5 documents per search
 
 ## 🤝 Contributing
@@ -267,7 +275,7 @@ docker run -p 8000:8000 --env-file .env rag-backend
 1. Fork repository
 2. Create feature branch
 3. Commit changes
-4. Push ke branch
+4. Push to branch
 5. Create Pull Request
 
 ## 📄 License
@@ -279,27 +287,27 @@ MIT License - see LICENSE file for details
 ### Common Issues
 
 1. **MongoDB Connection Error**
-   - Pastikan MONGODB_URI benar
+   - Ensure MONGODB_URI is correct
    - Check network connectivity
-   - Verify MongoDB Atlas whitelist IP
+   - Verify MongoDB Atlas IP whitelist
 
 2. **Google API Error**
-   - Verify GOOGLE_API_KEY valid
+   - Verify GOOGLE_API_KEY is valid
    - Check API quota limits
-   - Ensure Gemini API enabled
+   - Ensure Gemini API is enabled
 
 3. **Embedding Model Download**
-   - First run akan download model (~90MB)
-   - Pastikan internet connection stable
-   - Check disk space available
+   - First run will download model (~90MB)
+   - Ensure stable internet connection
+   - Check available disk space
 
 ### Debug Mode
 
-Run dengan debug logging:
+Run with debug logging:
 ```bash
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload --log-level debug
 ```
 
 ## 📞 Support
 
-Untuk pertanyaan atau issues, silakan buat issue di repository atau hubungi maintainer.
+For questions or issues, please create an issue in the repository or contact the maintainer.
